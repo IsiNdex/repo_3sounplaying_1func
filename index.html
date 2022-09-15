@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- /////////////sounds///////////// -->
+
+    <audio id="cooliouSadEdit">
+        <source src="mp.3/untitled.mp3" type="audio/mpeg" autoplay>
+    </audio>
+
+    <audio id="GTASA_fullBass">
+        <source src="mp.3/y2mate.com - GTA San Andreas Theme Song Full   (1).mp3" type="audio/mpeg" autoplay>
+    </audio>
+
+    <audio id="stopIT">
+        <source src="mp.3/y2mate.com - Michael Jordan Stop It Get Some Help.mp3" type="audio/mpeg" autoplay>
+    </audio>
+
+    <!-- /////////////button///////////// -->
+    <div class="contoner">
+        <button onclick="playy(this)" class="button-78" id="cooliou_Sad_Edit">cooliou_Sad_Edit</button>
+        <button onclick="playy(this)" class="button-78" id="GTA_SA_Music_Full_Bass">GTA_SA_Music_Full_Bass</button>
+        <button onclick="playy(this)" class="button-78" id="Stop_it">Stop_it</button>
+        <a href="index.html"><button class="button-78">RST</button></a>
+
+    </div>
+
+</body>
+</html>
+
+<script src="js/main.js"> </script>
+
+<script>
+    const music1 = document.getElementById("cooliouSadEdit")
+    const music2 = document.getElementById("GTASA_fullBass")
+    const music3 = document.getElementById("stopIT")
+
+    function playy(id){
+        if (id.id == "cooliou_Sad_Edit") {
+            music1.play()
+
+            music2.pause()
+            music3.pause()
+        } 
+        else if (id.id == "GTA_SA_Music_Full_Bass") {
+            music2.play()
+
+            music1.pause()
+            music3.pause()
+        } 
+        else if (id.id == "Stop_it") {
+            music3.play()
+
+            music1.pause()
+            music2.pause()
+        }
+    }
+</script>
+
